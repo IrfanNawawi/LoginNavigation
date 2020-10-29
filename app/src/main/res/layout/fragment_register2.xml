@@ -23,9 +23,10 @@
         android:padding="16dp">
 
         <TextView
+            android:id="@+id/tv_hello"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Halo Name, untuk melanjutkan register silahkan isi password dibawah"
+            android:text="Halo $name, untuk melanjutkan register silahkan isi password dibawah"
             android:textColor="@android:color/black"
             android:textAlignment="center"
             android:layout_gravity="center_horizontal"/>

@@ -1,10 +1,11 @@
 package com.mockdroid.loginnavigation.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.mockdroid.loginnavigation.R
@@ -30,8 +31,23 @@ class Register1Fragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(view: View?) {
-        when(view?.id) {
-            R.id.btn_next -> navController.navigate(R.id.action_register1Fragment_to_register2Fragment)
+        when (view?.id) {
+            R.id.btn_next -> {
+                if (edt_name.text.toString().isEmpty()) {
+                    edt_name.error = "Name harus diisi"
+                } else if (edt_email.text.toString().isEmpty()) {
+                    edt_email.error = "Email harus diisi"
+                } else {
+                    val bundle = bundleOf(
+                        "name" to edt_name.text.toString(),
+                        "email" to edt_email.text.toString()
+                    )
+                    navController.navigate(
+                        R.id.action_register1Fragment_to_register2Fragment,
+                        bundle
+                    )
+                }
+            }
             R.id.tv_back -> activity?.onBackPressed()
         }
     }
