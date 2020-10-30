@@ -9,56 +9,56 @@
         android:id="@+id/mainFragment"
         android:name="com.mockdroid.loginnavigation.fragment.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_register1Fragment"
             app:destination="@id/register1Fragment"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"/>
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/action_mainFragment_to_homeFragment"
-            app:destination="@id/homeFragment"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_mainFragment_to_homeActivity"
+            app:destination="@id/homeActivity"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"/>
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/register1Fragment"
         android:name="com.mockdroid.loginnavigation.fragment.Register1Fragment"
         android:label="fragment_register1"
-        tools:layout="@layout/fragment_register1" >
+        tools:layout="@layout/fragment_register1">
         <action
             android:id="@+id/action_register1Fragment_to_register2Fragment"
             app:destination="@id/register2Fragment"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"/>
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/register2Fragment"
         android:name="com.mockdroid.loginnavigation.fragment.Register2Fragment"
         android:label="fragment_register2"
-        tools:layout="@layout/fragment_register2" >
+        tools:layout="@layout/fragment_register2">
         <action
             android:id="@+id/action_register2Fragment_to_resultFragment"
             app:destination="@id/resultFragment"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"/>
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.mockdroid.loginnavigation.fragment.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" />
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.mockdroid.loginnavigation.fragment.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.mockdroid.loginnavigation.activity.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 </navigation>

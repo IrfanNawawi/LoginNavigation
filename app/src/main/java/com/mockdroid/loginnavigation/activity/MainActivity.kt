@@ -1,7 +1,7 @@
 package com.mockdroid.loginnavigation.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.mockdroid.loginnavigation.R
 
 class MainActivity : AppCompatActivity() {

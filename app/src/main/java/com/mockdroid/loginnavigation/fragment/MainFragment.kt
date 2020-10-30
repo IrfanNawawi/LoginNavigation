@@ -32,7 +32,7 @@ class MainFragment : Fragment(), View.OnClickListener {
     override fun onClick(view: View?) {
         when (view?.id) {
             R.id.btn_register -> navController.navigate(R.id.action_mainFragment_to_register1Fragment)
-            R.id.btn_login -> navController.navigate(R.id.action_mainFragment_to_homeFragment)
+            R.id.btn_login -> navController.navigate(R.id.action_mainFragment_to_homeActivity)
         }
     }
 
