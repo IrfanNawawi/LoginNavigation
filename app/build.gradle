@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -35,8 +36,29 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    // Navigation
     def nav_version = "2.3.1"
-
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Room
+    def room_version = "2.2.5"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+    // RxJava
+    def rxandroid_version = "3.0.0"
+    def rxjava_version = "3.0.7"
+    implementation "io.reactivex.rxjava3:rxandroid:$rxandroid_version"
+    implementation "io.reactivex.rxjava3:rxjava:$rxjava_version"
+
+    // ViewModel
+    def viewmodel_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$viewmodel_version"
+
+    // LiveData
+    def livedata_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata:$livedata_version"
+
 }
